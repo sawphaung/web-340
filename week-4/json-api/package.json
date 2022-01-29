@@ -1,0 +1,8 @@
+{
+  "name": "jsonapi",
+  "author": "Saw Phaung",
+  "private": true,
+  "dependencies": {
+    "express": "^4.17.2"
+  }
+}
