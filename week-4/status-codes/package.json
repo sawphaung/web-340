@@ -1,0 +1,8 @@
+{
+  "name": "http-status-code",
+  "author": "Saw Phaung",
+  "private": true,
+  "dependencies": {
+    "express": "^4.17.2"
+  }
+}
