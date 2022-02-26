@@ -37,17 +37,21 @@ db.once("open", function(){
 
 // initialize the express Application
 var app = express();
+/* Morgan logger */
 app.use(logger("short"));
 
 // Security
+/* helmet, helps prevent xss */
 app.use(helmet.xssFilter());
+/* parse response object body */
 app.use(bodyParser.urlencoded({
     extended: true,
 }));
 
+/* Parse Cookie header and populate req.cookies with an object keyed by the cookie names. */
 app.use(cookieParser());
+/* CSRF cookie */
 app.use(csrfProtection);
-
 app.use(function(request, response, next){
     var token = request.csrfToken();
     response.cookie("XSRF-Token", token);
@@ -58,7 +62,6 @@ app.use(function(request, response, next){
 // View Engines
 app.set("views", path.resolve(__dirname, "views"));
 app.set("view engine", "ejs");
-
 
 // Get Images
 app.use(express.static('public')); 
