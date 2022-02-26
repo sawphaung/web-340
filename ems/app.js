@@ -67,8 +67,10 @@ app.set("view engine", "ejs");
 app.use(express.static('public')); 
 app.use('/images', express.static('images'));
 
+// CSS 
 app.use('/css',express.static('css'));
 
+// Routes
 app.get("/", function(request, response) {
     response.render("index", {
         title: "Home Page",
@@ -83,10 +85,15 @@ app.get("/new", function(request, response) {
     });
 });
 
+// Grab the data from database
 app.get("/list", function(request, response) {
-    response.render("list", {
-        title: "Employee Records",
-        message: "Employee Lists",
+    Employee.find({}, function(error, employees) {
+        if(error) throw error;
+        response.render("list", {
+            title: "Employee Records",
+            message: "Employee Lists",
+            employees: employees,
+         });  
     });
 });
 
@@ -97,6 +104,37 @@ app.get("/view", function(request, response) {
     });
 });
 
+
+// Update the form submission sending to the mLab
+app.post("/process", function(request, response){
+    // console.log(request.body.txtName);
+
+    if(!request.body.txtFirstName || !request.body.txtLastName ) {
+        response.status(400).send("Please enter this field.");
+        return;
+    }
+
+    var employeeFirstName = request.body.txtFirstName;
+    var employeeLastName = request.body.txtLastName;
+    // console.log(empFirstName, empLastName);
+
+    // create new
+    var employee = new Employee({
+        firstName: employeeFirstName,
+        lastName: employeeLastName,
+    });
+
+    // save
+    employee.save(function(error){
+        if(error) throw error;
+        console.log(employeeFirstName, employeeLastName + ' saved successfully!');
+    });
+
+    response.redirect("/");
+});
+
+
+// Create Server
 http.createServer(app).listen(8080, function(){
     console.log("Application started on port 8080!");
 });

@@ -41,6 +41,28 @@ body {
   transition: all 0.3s ease;
 }
 
+.btn-new {
+  display: inline-block;
+  width: 100%;
+  max-width: 200px;
+  height: 40px;
+  line-height: 40px;
+  color: $w;
+  background: #3cb449;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+
+  &:hover {
+    color: $w;
+    background: $b;
+  }
+}
+
 // Main Hero
 .main-hero {
   position: relative;
@@ -154,7 +176,7 @@ main.secondary {
         max-width: 250px;
         border: none;
         height: 50px;
-        background: $b;
+        background: #3cb449;
         color: $w;
         font-size: 16px;
         font-weight: bold;
@@ -164,9 +186,36 @@ main.secondary {
         font-family: inherit;
 
         &:hover {
-          background: #3cb449;
+          background: $b;
         }
       }
     }
+  }
+}
+
+// Table - Employee List
+table.employee {
+  font-family: inherit;
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 640px;
+  margin: 50px 0;
+
+  thead,
+  tbody {
+    th,
+    td {
+      padding: 10px 15px;
+      border: 1px solid #ddd;
+    }
+  }
+
+  thead {
+    background: #0f2741;
+    color: $w;
+  }
+
+  tbody tr:nth-child(even) {
+    background: #f2f2f2;
   }
 }

@@ -35,6 +35,29 @@ body {
   transition: all 0.3s ease;
 }
 
+.btn-new {
+  display: inline-block;
+  width: 100%;
+  max-width: 200px;
+  height: 40px;
+  line-height: 40px;
+  color: #fff;
+  background: #3cb449;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.btn-new:hover {
+  color: #fff;
+  background: #000;
+}
+
 .main-hero {
   position: relative;
   background: url("../images/hero-landingPage.jpg") top center/cover no-repeat;
@@ -150,7 +173,7 @@ main.secondary .newEmployee-form .form-button button {
   max-width: 250px;
   border: none;
   height: 50px;
-  background: #000;
+  background: #3cb449;
   color: #fff;
   font-size: 16px;
   font-weight: bold;
@@ -161,6 +184,31 @@ main.secondary .newEmployee-form .form-button button {
 }
 
 main.secondary .newEmployee-form .form-button button:hover {
-  background: #3cb449;
+  background: #000;
+}
+
+table.employee {
+  font-family: inherit;
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 640px;
+  margin: 50px 0;
+}
+
+table.employee thead th,
+table.employee thead td,
+table.employee tbody th,
+table.employee tbody td {
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+}
+
+table.employee thead {
+  background: #0f2741;
+  color: #fff;
+}
+
+table.employee tbody tr:nth-child(even) {
+  background: #f2f2f2;
 }
 /*# sourceMappingURL=style.css.map */
