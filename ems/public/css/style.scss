@@ -93,3 +93,80 @@ footer {
     color: $w;
   }
 }
+
+// New Employee Page
+main.secondary {
+  padding: 50px 10%;
+  width: 100%;
+  height: calc(100vh - 110px);
+
+  .inner-wrap {
+    margin-top: 70px;
+  }
+
+  // content Styling
+  h1 {
+    color: $b;
+    margin: 0 0 25px;
+  }
+
+  // Form
+  .newEmployee-form {
+    margin: 50px 0;
+
+    .form-group {
+      display: flex;
+      align-items: center;
+      margin: 10px 0 35px;
+
+      label {
+        display: block;
+        font-size: 18px;
+        font-weight: 600;
+        margin-right: 20px;
+      }
+
+      input {
+        font-family: inherit;
+        width: 270px;
+        height: 40px;
+        padding: 5px 10px;
+        font-size: 16px;
+        letter-spacing: 0.05em;
+        outline: none;
+        border: 1.5px solid $b;
+        border-radius: 3px;
+        transition: all 0.3s ease;
+
+        &:focus {
+          border: 1.5px solid #3cb449;
+        }
+      }
+    }
+
+    //Button
+    .form-button {
+      margin: 50px 0;
+
+      button {
+        display: block;
+        width: 100%;
+        max-width: 250px;
+        border: none;
+        height: 50px;
+        background: $b;
+        color: $w;
+        font-size: 16px;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        border-radius: 3px;
+        font-family: inherit;
+
+        &:hover {
+          background: #3cb449;
+        }
+      }
+    }
+  }
+}

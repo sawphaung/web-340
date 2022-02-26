@@ -85,4 +85,82 @@ footer p {
   margin: 0;
   color: #fff;
 }
+
+main.secondary {
+  padding: 50px 10%;
+  width: 100%;
+  height: calc(100vh - 110px);
+}
+
+main.secondary .inner-wrap {
+  margin-top: 70px;
+}
+
+main.secondary h1 {
+  color: #000;
+  margin: 0 0 25px;
+}
+
+main.secondary .newEmployee-form {
+  margin: 50px 0;
+}
+
+main.secondary .newEmployee-form .form-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 10px 0 35px;
+}
+
+main.secondary .newEmployee-form .form-group label {
+  display: block;
+  font-size: 18px;
+  font-weight: 600;
+  margin-right: 20px;
+}
+
+main.secondary .newEmployee-form .form-group input {
+  font-family: inherit;
+  width: 270px;
+  height: 40px;
+  padding: 5px 10px;
+  font-size: 16px;
+  letter-spacing: 0.05em;
+  outline: none;
+  border: 1.5px solid #000;
+  border-radius: 3px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+main.secondary .newEmployee-form .form-group input:focus {
+  border: 1.5px solid #3cb449;
+}
+
+main.secondary .newEmployee-form .form-button {
+  margin: 50px 0;
+}
+
+main.secondary .newEmployee-form .form-button button {
+  display: block;
+  width: 100%;
+  max-width: 250px;
+  border: none;
+  height: 50px;
+  background: #000;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border-radius: 3px;
+  font-family: inherit;
+}
+
+main.secondary .newEmployee-form .form-button button:hover {
+  background: #3cb449;
+}
 /*# sourceMappingURL=style.css.map */
