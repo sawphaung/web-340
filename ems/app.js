@@ -15,6 +15,8 @@ var path = require("path");
 
 var logger = require("morgan");
 
+var helmet = require("helmet"); // Library for XSS attacks
+
 var app = express();
 
 // Mongoose Connection
@@ -43,6 +45,8 @@ app.set("views", path.resolve(__dirname, "views"));
 app.set("view engine", "ejs");
 
 app.use(logger("short"));
+
+app.use(helmet.xssFilter());
 
 // Get Images
 app.use(express.static('public')); 
