@@ -97,12 +97,40 @@ app.get("/list", function(request, response) {
     });
 });
 
-app.get("/view", function(request, response) {
-    response.render("view", {
-        title: "View Employee Records",
-        message: "View Employee"
+// List - Detail
+app.get("/view/:queryName", function(request, response){
+    var queryName = request.params.queryName;
+    
+    Employee.find({'name': queryName}, function(error, employees){
+        if(error) throw error;
+
+        if(employees.length > 0) {
+            response.render("view", {
+                title: "Employee Record",
+                message: "Employee Details",
+                employees: employees,
+            });
+        } else {
+            response.redirect("/list");
+        }
     });
+
 });
+
+// Delete Id
+app.get('/view/delete/:id', function(req, res) {
+  const employeeId = req.params.id; 
+
+  Employee.findByIdAndDelete({'_id': employeeId}, function(err, employees) {
+    if (err) {
+      throw err;
+    }
+    else {
+      res.redirect('/list');
+    }
+  });
+});
+
 
 
 // Update the form submission sending to the mLab
@@ -130,7 +158,7 @@ app.post("/process", function(request, response){
         console.log(employeeFirstName, employeeLastName + ' saved successfully!');
     });
 
-    response.redirect("/");
+    response.redirect("/list");
 });
 
 

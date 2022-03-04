@@ -218,4 +218,39 @@ table.employee {
   tbody tr:nth-child(even) {
     background: #f2f2f2;
   }
+
+  td a {
+    color: #0f2741;
+    transition: all 0.3s ease;
+
+    &:hover {
+      color: #3cb449;
+    }
+  }
+}
+
+// Employee Details
+.form-group {
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 450px;
+
+  label {
+    margin-bottom: 5px;
+  }
+}
+
+.btn-back {
+  display: inline-block;
+  margin: 25px 0;
+  color: $b;
+  font-size: 18px;
+  text-decoration: none;
+  border-bottom: 2px solid #3cb449;
+  transition: all 0.3s ease;
+
+  &:hover {
+    color: #0f2741;
+    border-color: #0f2741;
+  }
 }

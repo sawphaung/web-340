@@ -211,4 +211,40 @@ table.employee thead {
 table.employee tbody tr:nth-child(even) {
   background: #f2f2f2;
 }
+
+table.employee td a {
+  color: #0f2741;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+table.employee td a:hover {
+  color: #3cb449;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 450px;
+}
+
+.form-group label {
+  margin-bottom: 5px;
+}
+
+.btn-back {
+  display: inline-block;
+  margin: 25px 0;
+  color: #000;
+  font-size: 18px;
+  text-decoration: none;
+  border-bottom: 2px solid #3cb449;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.btn-back:hover {
+  color: #0f2741;
+  border-color: #0f2741;
+}
 /*# sourceMappingURL=style.css.map */
