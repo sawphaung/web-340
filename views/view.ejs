@@ -1,0 +1,51 @@
+<!--
+    Title: view-Ejs 
+    Author: Professor Krasso
+    Modified by: Saw Phaung
+    Date: Feb 25, 2022
+-->
+<!DOCTYPE html>
+<html lang="en">
+<%- include('header'); -%>
+
+    <body>
+        <!-- Navbar -->
+        <%- include('navbar'); -%>
+
+            <main class="secondary">
+
+                <section class="inner-wrap">
+                    <h1>
+                        <%= message %>
+                    </h1>
+
+                    <div>
+                        <div class="form-group">
+                            <label for="">First Name: </label>
+                            <input type="text" class="form-control" readonly value="<%= employees[0].firstName %>" name="txtName" />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="">Last Name: </label>
+                            <input type="text" class="form-control" readonly value="<%= employees[0].lastName %>" name="txtName" />
+                        </div>
+
+                        <a class="btn-back" href="/list">Return to Employee List</a>
+                    </div>
+
+                </section>
+            </main>
+
+
+
+            <!-- Footer -->
+            <%- include('footer'); -%>
+
+
+                <!-- Script  -->
+                <% - include('scripts'); -%>
+
+
+    </body>
+
+</html>

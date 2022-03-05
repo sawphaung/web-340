@@ -1,0 +1,256 @@
+/*
+    Description: Custom Styling
+*/
+
+// Variables
+$w: #fff;
+$b: #000;
+
+html {
+  scrollbar-color: #3cb449 $b;
+}
+
+body {
+  font-family: "Oswald", sans-serif;
+  min-width: 350px;
+  max-width: 2000px;
+  margin: 0 auto;
+  letter-spacing: 0.05em;
+  line-height: 1.5;
+}
+
+// Utilities
+.wrapper {
+  margin: 0 10%;
+}
+
+// buttons
+.btn-contact {
+  display: inline-block;
+  width: 100%;
+  max-width: 250px;
+  height: 50px;
+  line-height: 45px;
+  color: $w;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  border: 1px solid $w;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.btn-new {
+  display: inline-block;
+  width: 100%;
+  max-width: 200px;
+  height: 40px;
+  line-height: 40px;
+  color: $w;
+  background: #3cb449;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+
+  &:hover {
+    color: $w;
+    background: $b;
+  }
+}
+
+// Main Hero
+.main-hero {
+  position: relative;
+  background: url("../images/hero-landingPage.jpg") top center / cover no-repeat;
+  width: 100%;
+  height: calc(100vh - 110px);
+
+  // Hero Content
+  .hero-content {
+    position: absolute;
+    top: 45%;
+    left: 10%;
+    transform: translateY(-50%);
+    max-width: 550px;
+    padding-right: 20px;
+
+    h1 {
+      font-size: 50px;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+      letter-spacing: 0.06em;
+    }
+
+    p {
+      font-size: 17px;
+      line-height: 1.8;
+      margin-bottom: 30px;
+      letter-spacing: 0.06em;
+    }
+
+    .btn-contact {
+      color: $b;
+      border-color: $b;
+
+      &:hover {
+        background: #333;
+        color: $w;
+      }
+    }
+  }
+}
+
+// Footer
+footer {
+  background: #333;
+  padding: 15px 0;
+
+  p {
+    margin: 0;
+    color: $w;
+  }
+}
+
+// New Employee Page
+main.secondary {
+  padding: 50px 10%;
+  width: 100%;
+  height: calc(100vh - 110px);
+
+  .inner-wrap {
+    margin-top: 70px;
+  }
+
+  // content Styling
+  h1 {
+    color: $b;
+    margin: 0 0 25px;
+  }
+
+  // Form
+  .newEmployee-form {
+    margin: 50px 0;
+
+    .form-group {
+      display: flex;
+      align-items: center;
+      margin: 10px 0 35px;
+
+      label {
+        display: block;
+        font-size: 18px;
+        font-weight: 600;
+        margin-right: 20px;
+      }
+
+      input {
+        font-family: inherit;
+        width: 270px;
+        height: 40px;
+        padding: 5px 10px;
+        font-size: 16px;
+        letter-spacing: 0.05em;
+        outline: none;
+        border: 1.5px solid $b;
+        border-radius: 3px;
+        transition: all 0.3s ease;
+
+        &:focus {
+          border: 1.5px solid #3cb449;
+        }
+      }
+    }
+
+    //Button
+    .form-button {
+      margin: 50px 0;
+
+      button {
+        display: block;
+        width: 100%;
+        max-width: 250px;
+        border: none;
+        height: 50px;
+        background: #3cb449;
+        color: $w;
+        font-size: 16px;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        border-radius: 3px;
+        font-family: inherit;
+
+        &:hover {
+          background: $b;
+        }
+      }
+    }
+  }
+}
+
+// Table - Employee List
+table.employee {
+  font-family: inherit;
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 640px;
+  margin: 50px 0;
+
+  thead,
+  tbody {
+    th,
+    td {
+      padding: 10px 15px;
+      border: 1px solid #ddd;
+    }
+  }
+
+  thead {
+    background: #0f2741;
+    color: $w;
+  }
+
+  tbody tr:nth-child(even) {
+    background: #f2f2f2;
+  }
+
+  td a {
+    color: #0f2741;
+    transition: all 0.3s ease;
+
+    &:hover {
+      color: #3cb449;
+    }
+  }
+}
+
+// Employee Details
+.form-group {
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 450px;
+
+  label {
+    margin-bottom: 5px;
+  }
+}
+
+.btn-back {
+  display: inline-block;
+  margin: 25px 0;
+  color: $b;
+  font-size: 18px;
+  text-decoration: none;
+  border-bottom: 2px solid #3cb449;
+  transition: all 0.3s ease;
+
+  &:hover {
+    color: #0f2741;
+    border-color: #0f2741;
+  }
+}
