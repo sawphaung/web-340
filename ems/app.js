@@ -59,9 +59,12 @@ app.use(function(request, response, next){
     next();
 });
 
-// View Engines
+/**
+ * Sets up the view engine, view's directory path, and the server port.
+ */
 app.set("views", path.resolve(__dirname, "views"));
 app.set("view engine", "ejs");
+app.set("port", process.env.PORT || 8080 );
 
 // Get Images
 app.use(express.static('public')); 
@@ -163,6 +166,6 @@ app.post("/process", function(request, response){
 
 
 // Create Server
-http.createServer(app).listen(8080, function(){
-    console.log("Application started on port 8080!");
+http.createServer(app).listen(app.get("port"), function(){
+    console.log("Application started on port " + app.get("port"));
 });
